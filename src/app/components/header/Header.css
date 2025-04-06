@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@theme {
+    --font-poppins: Poppins, sans-serif;
+}
+
+.default {
+    @apply font-poppins font-bold text-2xl text-white relative;
+}
+
+.default .img {
+    @apply w-full;
+}
+
+.default .title {
+    @apply absolute top-16 left-60;
+}
+
+.btn_type_A {
+    @apply cursor-pointer border rounded-3xl py-2 px-6  absolute top-16 left-120
+           font-poppins font-extralight text-[1rem] 
+           hover:text-[#00B0F3] transition-colors duration-300;
+}
+
+.btn_type_B {
+    @apply cursor-pointer rounded-3xl py-2.5 px-6  absolute top-16 left-160
+           font-poppins font-extralight text-[1rem] bg-[#00B0F3]
+           hover:bg-[#00B9FF] transition-colors duration-300;
+}
+
+.navigation {
+    @apply flex justify-end;
+}
+
+.navigation ul {
+    @apply flex space-x-20 text-[1rem] font-poppins font-extralight 
+           absolute top-20 right-60 px-10 cursor-pointer;
+}
+
+.navigation ul li:hover {
+    @apply text-[#00B9FF] underline transition-all duration-300;
+}
